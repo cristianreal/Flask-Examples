@@ -1,5 +1,4 @@
-import requests
-import urllib, json
+import requests, urllib, json
 from flask import Flask, render_template, request, Response, jsonify, make_response
 app = Flask(__name__)
 
@@ -18,8 +17,8 @@ def hello_world():
 def Prueba():
 	if request.method == 'POST':
 		url = "https://opensource.adobe.com/Spry/data/json/donuts.js"
-		response = urllib.urlopen(url)
-		data = json.loads(response.read())
+		json_url = urlopen(url)
+		data = json.loads(json_url.read())
 		print(data)
 		#headers = {'Content-type': 'application/json'}
 		return "Hola hermoso"
