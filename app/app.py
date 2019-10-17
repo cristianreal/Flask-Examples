@@ -144,7 +144,7 @@ def Prueba():
 					}
 					}
 		#headers = {'Content-type': 'application/json'}
-		return render_template('index.html', data)
+		return render_template('index.html', data=data)
 	return render_template('Button.html')
 
 if __name__ == '__main__':
