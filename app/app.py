@@ -12,7 +12,7 @@ def hello_world():
 
 @app.route('/prueba', methods=['GET'])
 def Prueba():
-	if request.method == 'POST'
+	if request.method == 'POST':
 		url = "https://opensource.adobe.com/Spry/data/json/donuts.js"
 		response = urllib.urlopen(url)
 		data = json.loads(response.read())
