@@ -1,14 +1,14 @@
 from flask import Flask
-from flask_restful import Resource, Api
-
+from flask import render_template
 app = Flask(__name__)
-api = Api(app)
 
-class HelloWorld(Resource):
-    def get(self):
-        return {'hello': 'world'}
-
-api.add_resource(HelloWorld, '/')
+@app.route('/')
+def hello_world():
+    titulo = "GeekyFlask"
+    usuario = {'nombre': 'Alejandro'}
+    return render_template('index.html',
+                           titulo=titulo,
+                           usuario=usuario)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(host='0.0.0.0')
