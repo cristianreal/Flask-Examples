@@ -15,7 +15,7 @@ def hello_world():
     return render_template('index.html', titulo=titulo, usuario=usuario)
 
 
-@app.route('/prueba', methods=['GET'])
+@app.route('/prueba', methods=['GET', 'POST'])
 def Prueba():
 	if request.method == 'POST':
 		url = "https://opensource.adobe.com/Spry/data/json/donuts.js"
