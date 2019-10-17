@@ -1,7 +1,12 @@
+import requests
 import urllib, json
 from flask import Flask
 from flask import render_template
 app = Flask(__name__)
+
+class MicroservicioArchivosTraducidos():
+	def __init__(self, Nombre):
+		self.Nombre = Nombre
 
 @app.route('/')
 def hello_world():
