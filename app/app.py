@@ -4,8 +4,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    titulo = "GeekyFlask"
-    usuario = {'nombre': 'Alejandro'}
+    titulo = "Sistemas Operativos"
+    usuario = {'nombre': 'Christian'}
     return render_template('index.html',
                            titulo=titulo,
                            usuario=usuario)
