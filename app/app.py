@@ -22,7 +22,7 @@ def Prueba():
 			{'nombre': 'Mario'},
 			{'nombre': 'Osmary'},
 			{'nombre': 'Dachi'},
-			{'nombre': 'Lúis'},
+			{'nombre': 'Luis'},
 			{'nombre': 'Aldo'}
 		]
 		#headers = {'Content-type': 'application/json'}
