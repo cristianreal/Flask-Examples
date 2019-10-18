@@ -46,16 +46,16 @@
     </tr>
   </thead>
   <tbody>
+  	{% for x in data %}
     <tr class="table-info">
-      {% for x in data %}
       <th scope="row">{{ x.id }}</th>
       <td>{{ x.name }}</td>
       <td>{{ x.path }}</td>
       <td>{{ x.languaje }}</td>
       <td>{{ x.state }}</td>
       <td>{{ x.user }}</td>
-      {% endfor %}
-    </tr>
+  	</tr>
+    {% endfor %}
   </tbody>
 </table> 
 </div>
