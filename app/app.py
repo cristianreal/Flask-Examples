@@ -1,14 +1,14 @@
 import requests, urllib, json
 from flask import Flask, render_template, request, Response, jsonify, make_response
-#from flask_mysqldb import MySQL
+from flask_mysqldb import MySQL
 app = Flask(__name__)
 
-#app.config['MYSQL_HOST'] = 'localhost'
-#app.config['MYSQL_USER'] = 'root'
-#app.config['MYSQL_PASSWORD'] = ''
-#app.config['MYSQL_DB'] = 'softwareavanzado'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'softwareavanzado'
 
-#mysql = MySQL(app)
+mysql = MySQL(app)
 
 class MicroservicioArchivosTraducidos():
 	def __init__(self, Nombre):
@@ -23,10 +23,10 @@ def hello_world():
 @app.route('/po', methods=['GET', 'POST'])
 def Creacion_Archivo_PO():
 	if request.method == 'POST':
-		#cur = mysql.connection.cursor()
-		#cur.execute("SELECT original, traducida FROM contacts")
-		#data = cur.fetchall()
-		#cur.close()
+		cur = mysql.connection.cursor()
+		cur.execute("SELECT original, traducida FROM contacts")
+		data = cur.fetchall()
+		cur.close()
 		return render_template('Button.html', data=data)
 	return render_template('Button.html')
 
