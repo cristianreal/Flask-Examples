@@ -27,7 +27,7 @@ def Creacion_Archivo_PO():
 		cur.execute("SELECT original, traducida FROM contacts")
 		data = cur.fetchall()
 		cur.close()
-		return render_template('Button.html', data=data)
+		return render_template('po.html', data=data)
 	return render_template('Button.html')
 
 @app.route('/prueba', methods=['GET', 'POST'])
