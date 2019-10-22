@@ -14,11 +14,11 @@ class MicroservicioArchivosTraducidos():
 	def __init__(self, Nombre):
 		self.Nombre = Nombre
 
-@app.route('/')
+@app.route('/rutaejemplo')
 def hello_world():
     titulo = "Software Avanzado"
     usuario = {'nombre': 'Christian'}
-    return render_template('index.html', titulo=titulo, usuario=usuario)
+    return render_template('rutaejemplo.html', titulo=titulo, usuario=usuario)
 
 @app.route('/po', methods=['GET', 'POST'])
 def Creacion_Archivo_PO():
